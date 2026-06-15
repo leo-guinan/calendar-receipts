@@ -1,0 +1,75 @@
+expectations:
+  - id: semax-phase-3-comparative-space-2026-W27
+    horizon: weekly
+    period: 2026-W27
+    project: semantic-axis
+    phase: "3"
+    phase_name: Comparative Space
+    severity: critical
+    weight: 13
+    promise: >
+      By the end of 2026-W27, Semantic Axis supports multiple concepts in the same
+      semantic space and distinguishes framing movement from attention movement. The
+      captured artifact must show at least three concepts overlaid against the same axis,
+      per-bucket document counts, and a first-pass interaction readout such as correlation
+      or lead/lag.
+    tests:
+      - id: multi-concept-overlay-artifact-captured
+        type: receipt_exists
+        severity: critical
+        weight: 5
+        query:
+          project: semantic-axis
+          type: semax_ux_artifact_capture
+          phase: phase-3-comparative-space
+          artifact: multi_concept_overlay_walkthrough
+          period: 2026-W27
+        required_count: 1
+
+      - id: attention-vs-framing-artifact-captured
+        type: receipt_exists
+        severity: critical
+        weight: 5
+        query:
+          project: semantic-axis
+          type: semax_ux_artifact_capture
+          phase: phase-3-comparative-space
+          artifact: attention_vs_framing_walkthrough
+          period: 2026-W27
+        required_count: 1
+
+      - id: ux-artifact-names-required-experience
+        type: field_contains
+        severity: important
+        weight: 3
+        query:
+          project: semantic-axis
+          type: semax_ux_artifact_capture
+          phase: phase-3-comparative-space
+          period: 2026-W27
+        field: user_experience
+        contains: compare multiple concept trajectories in the same semantic space
+
+      - id: interaction-readout-included
+        type: field_contains
+        severity: important
+        weight: 3
+        query:
+          project: semantic-axis
+          type: semax_ux_artifact_capture
+          phase: phase-3-comparative-space
+          period: 2026-W27
+        field: evidence
+        contains: interaction_readout
+
+      - id: ben-phase-3-signoff-recorded
+        type: receipt_exists
+        severity: critical
+        weight: 8
+        query:
+          project: semantic-axis
+          type: ben_phase_signoff
+          phase: phase-3-comparative-space
+          period: 2026-W27
+          decision: approved
+        required_count: 1

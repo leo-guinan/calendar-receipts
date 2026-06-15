@@ -59,3 +59,77 @@ expectations:
           type: youtube_analytics_snapshot
           period: 2026-W25
         required_count: 1
+
+  - id: semax-phase-1-scientific-artifact-2026-W25
+    horizon: weekly
+    period: 2026-W25
+    project: semantic-axis
+    phase: "1"
+    phase_name: Scientific Artifact Loop
+    severity: critical
+    weight: 13
+    promise: >
+      By the end of 2026-W25, Semantic Axis turns a measurement into a durable,
+      inspectable scientific artifact: saved report block, permalink, fresh-browser
+      reconstruction, fork lineage, full provenance, and Ben approval. The captured
+      artifact must show the complete user experience, not just a backend response.
+    tests:
+      - id: saved-report-permalink-ux-artifact-captured
+        type: receipt_exists
+        severity: critical
+        weight: 5
+        query:
+          project: semantic-axis
+          type: semax_ux_artifact_capture
+          phase: phase-1-scientific-artifact
+          artifact: saved_report_permalink_walkthrough
+          period: 2026-W25
+        required_count: 1
+
+      - id: fork-lineage-ux-artifact-captured
+        type: receipt_exists
+        severity: critical
+        weight: 5
+        query:
+          project: semantic-axis
+          type: semax_ux_artifact_capture
+          phase: phase-1-scientific-artifact
+          artifact: fork_lineage_walkthrough
+          period: 2026-W25
+        required_count: 1
+
+      - id: ux-artifact-names-required-experience
+        type: field_contains
+        severity: important
+        weight: 3
+        query:
+          project: semantic-axis
+          type: semax_ux_artifact_capture
+          phase: phase-1-scientific-artifact
+          period: 2026-W25
+        field: user_experience
+        contains: run measurement, save report, open permalink in a fresh browser, fork report
+
+      - id: provenance-visible-in-artifact
+        type: field_contains
+        severity: critical
+        weight: 5
+        query:
+          project: semantic-axis
+          type: semax_ux_artifact_capture
+          phase: phase-1-scientific-artifact
+          period: 2026-W25
+        field: evidence
+        contains: provenance
+
+      - id: ben-phase-1-signoff-recorded
+        type: receipt_exists
+        severity: critical
+        weight: 8
+        query:
+          project: semantic-axis
+          type: ben_phase_signoff
+          phase: phase-1-scientific-artifact
+          period: 2026-W25
+          decision: approved
+        required_count: 1

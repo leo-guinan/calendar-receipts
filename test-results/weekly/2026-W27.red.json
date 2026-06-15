@@ -1,0 +1,72 @@
+{
+  "created_at": "2026-06-15T15:44:24.334403+00:00",
+  "failures": [
+    {
+      "expectation_id": "semax-phase-3-comparative-space-2026-W27",
+      "expected": 1,
+      "message": "expected at least 1 matching receipt(s); observed 0",
+      "observed": 0,
+      "passed": false,
+      "severity": "critical",
+      "test_id": "multi-concept-overlay-artifact-captured",
+      "weight": 5
+    },
+    {
+      "expectation_id": "semax-phase-3-comparative-space-2026-W27",
+      "expected": 1,
+      "message": "expected at least 1 matching receipt(s); observed 0",
+      "observed": 0,
+      "passed": false,
+      "severity": "critical",
+      "test_id": "attention-vs-framing-artifact-captured",
+      "weight": 5
+    },
+    {
+      "expectation_id": "semax-phase-3-comparative-space-2026-W27",
+      "expected": "compare multiple concept trajectories in the same semantic space",
+      "message": "expected every matching receipt field 'user_experience' to contain 'compare multiple concept trajectories in the same semantic space'; matched 0, failures []",
+      "observed": [],
+      "passed": false,
+      "severity": "important",
+      "test_id": "ux-artifact-names-required-experience",
+      "weight": 3
+    },
+    {
+      "expectation_id": "semax-phase-3-comparative-space-2026-W27",
+      "expected": "interaction_readout",
+      "message": "expected every matching receipt field 'evidence' to contain 'interaction_readout'; matched 0, failures []",
+      "observed": [],
+      "passed": false,
+      "severity": "important",
+      "test_id": "interaction-readout-included",
+      "weight": 3
+    },
+    {
+      "expectation_id": "semax-phase-3-comparative-space-2026-W27",
+      "expected": 1,
+      "message": "expected at least 1 matching receipt(s); observed 0",
+      "observed": 0,
+      "passed": false,
+      "severity": "critical",
+      "test_id": "ben-phase-3-signoff-recorded",
+      "weight": 8
+    }
+  ],
+  "horizon": "weekly",
+  "id": "weekly-test-run-2026-W27-20260615T154424Z",
+  "period": "2026-W27",
+  "promise": "Run weekly expectation tests against receipts for 2026-W27.",
+  "result": "0/5 tests passed; weighted pass rate 0.0%.",
+  "status": "closed_partial",
+  "summary": {
+    "critical_failures": 3,
+    "failed": 5,
+    "passed": 0,
+    "passed_weight": 0,
+    "raw_pass_rate": 0.0,
+    "total": 5,
+    "total_weight": 24,
+    "weighted_pass_rate": 0.0
+  },
+  "type": "calendar_test_run"
+}

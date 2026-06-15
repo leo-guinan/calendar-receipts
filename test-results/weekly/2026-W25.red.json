@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-06-15T12:48:39.003278+00:00",
+  "created_at": "2026-06-15T15:44:24.224874+00:00",
   "failures": [
     {
       "expectation_id": "time-war-baseline-2026-W25",
@@ -59,22 +59,72 @@
       "severity": "important",
       "test_id": "weekly-analytics-baseline-exists",
       "weight": 3
+    },
+    {
+      "expectation_id": "semax-phase-1-scientific-artifact-2026-W25",
+      "expected": 1,
+      "message": "expected at least 1 matching receipt(s); observed 0",
+      "observed": 0,
+      "passed": false,
+      "severity": "critical",
+      "test_id": "saved-report-permalink-ux-artifact-captured",
+      "weight": 5
+    },
+    {
+      "expectation_id": "semax-phase-1-scientific-artifact-2026-W25",
+      "expected": 1,
+      "message": "expected at least 1 matching receipt(s); observed 0",
+      "observed": 0,
+      "passed": false,
+      "severity": "critical",
+      "test_id": "fork-lineage-ux-artifact-captured",
+      "weight": 5
+    },
+    {
+      "expectation_id": "semax-phase-1-scientific-artifact-2026-W25",
+      "expected": "run measurement, save report, open permalink in a fresh browser, fork report",
+      "message": "expected every matching receipt field 'user_experience' to contain 'run measurement, save report, open permalink in a fresh browser, fork report'; matched 0, failures []",
+      "observed": [],
+      "passed": false,
+      "severity": "important",
+      "test_id": "ux-artifact-names-required-experience",
+      "weight": 3
+    },
+    {
+      "expectation_id": "semax-phase-1-scientific-artifact-2026-W25",
+      "expected": "provenance",
+      "message": "expected every matching receipt field 'evidence' to contain 'provenance'; matched 0, failures []",
+      "observed": [],
+      "passed": false,
+      "severity": "critical",
+      "test_id": "provenance-visible-in-artifact",
+      "weight": 5
+    },
+    {
+      "expectation_id": "semax-phase-1-scientific-artifact-2026-W25",
+      "expected": 1,
+      "message": "expected at least 1 matching receipt(s); observed 0",
+      "observed": 0,
+      "passed": false,
+      "severity": "critical",
+      "test_id": "ben-phase-1-signoff-recorded",
+      "weight": 8
     }
   ],
   "horizon": "weekly",
-  "id": "weekly-test-run-2026-W25-20260615T124839Z",
+  "id": "weekly-test-run-2026-W25-20260615T154424Z",
   "period": "2026-W25",
   "promise": "Run weekly expectation tests against receipts for 2026-W25.",
-  "result": "0/4 tests passed; weighted pass rate 0.0%.",
+  "result": "0/9 tests passed; weighted pass rate 0.0%.",
   "status": "closed_partial",
   "summary": {
-    "critical_failures": 2,
-    "failed": 4,
+    "critical_failures": 6,
+    "failed": 9,
     "passed": 0,
     "passed_weight": 0,
     "raw_pass_rate": 0.0,
-    "total": 4,
-    "total_weight": 18,
+    "total": 9,
+    "total_weight": 44,
     "weighted_pass_rate": 0.0
   },
   "type": "calendar_test_run"

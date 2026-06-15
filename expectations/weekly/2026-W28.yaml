@@ -1,0 +1,74 @@
+expectations:
+  - id: semax-phase-4-prediction-canary-2026-W28
+    horizon: weekly
+    period: 2026-W28
+    project: semantic-axis
+    phase: "4"
+    phase_name: Prediction and Canary Scaffold
+    severity: critical
+    weight: 13
+    promise: >
+      By the end of 2026-W28, Semantic Axis has a falsifiable prediction/canary scaffold:
+      reports can produce prediction receipts, retrospective calibration can compare a
+      semantic signal against a dated real-world event, and author/source metadata can
+      identify candidate early movers without pretending that correlation is causation.
+    tests:
+      - id: prediction-log-artifact-captured
+        type: receipt_exists
+        severity: critical
+        weight: 5
+        query:
+          project: semantic-axis
+          type: semax_ux_artifact_capture
+          phase: phase-4-prediction-canary
+          artifact: prediction_log_walkthrough
+          period: 2026-W28
+        required_count: 1
+
+      - id: retrospective-calibration-artifact-captured
+        type: receipt_exists
+        severity: critical
+        weight: 5
+        query:
+          project: semantic-axis
+          type: semax_ux_artifact_capture
+          phase: phase-4-prediction-canary
+          artifact: retrospective_calibration_walkthrough
+          period: 2026-W28
+        required_count: 1
+
+      - id: canary-candidate-artifact-captured
+        type: receipt_exists
+        severity: critical
+        weight: 5
+        query:
+          project: semantic-axis
+          type: semax_ux_artifact_capture
+          phase: phase-4-prediction-canary
+          artifact: canary_candidate_walkthrough
+          period: 2026-W28
+        required_count: 1
+
+      - id: falsifier-visible-in-ux-artifact
+        type: field_contains
+        severity: critical
+        weight: 5
+        query:
+          project: semantic-axis
+          type: semax_ux_artifact_capture
+          phase: phase-4-prediction-canary
+          period: 2026-W28
+        field: user_experience
+        contains: falsifier
+
+      - id: ben-phase-4-signoff-recorded
+        type: receipt_exists
+        severity: critical
+        weight: 8
+        query:
+          project: semantic-axis
+          type: ben_phase_signoff
+          phase: phase-4-prediction-canary
+          period: 2026-W28
+          decision: approved
+        required_count: 1
