@@ -1,0 +1,5 @@
+projects:
+  - project: semantic-axis
+    title: Semantic Axis
+    current_period: 2026-W25
+    weeks_ahead: 4

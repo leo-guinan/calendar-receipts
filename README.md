@@ -56,6 +56,21 @@ views/projects/<project>.md
 
 The view shows the current initiative, artifact subtasks for the week, RED/GREEN state from receipts, and upcoming weekly phases. It is meant to be sent to stakeholders without asking them to inspect YAML. A small mercy in a universe otherwise committed to YAML.
 
+To add another project to the deployed stakeholder site, add it to:
+
+```text
+views/projects.yaml
+```
+
+Then run:
+
+```bash
+python3 scripts/generate_all_project_views.py
+python3 scripts/build_static_site.py
+```
+
+GitHub Pages deploys the generated static site from the `site/` artifact on pushes to `main`.
+
 ## Operating rule
 
 Never silently delete a failing expectation. End-of-period failures must become one of:
