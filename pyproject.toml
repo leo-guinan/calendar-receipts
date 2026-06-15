@@ -5,6 +5,11 @@ description = "RED/GREEN/REFACTOR receipt tests for calendar horizons"
 requires-python = ">=3.11"
 dependencies = ["pyyaml>=6.0", "pytest>=8.0"]
 
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["calendar_receipts*"]
+exclude = ["expectations*", "receipts*", "schemas*", "scripts*", "tests*", "test-results*"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
