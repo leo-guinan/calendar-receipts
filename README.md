@@ -40,6 +40,22 @@ test-results/     Captured RED/GREEN/CLOSE outputs
 schemas/          JSON schemas for expectation and receipt records
 ```
 
+## Project stakeholder views
+
+Generate a shareable view for any project with receipt expectations:
+
+```bash
+python3 scripts/generate_project_view.py --project semantic-axis --current-period 2026-W25 --weeks-ahead 4
+```
+
+Default output:
+
+```text
+views/projects/<project>.md
+```
+
+The view shows the current initiative, artifact subtasks for the week, RED/GREEN state from receipts, and upcoming weekly phases. It is meant to be sent to stakeholders without asking them to inspect YAML. A small mercy in a universe otherwise committed to YAML.
+
 ## Operating rule
 
 Never silently delete a failing expectation. End-of-period failures must become one of:
