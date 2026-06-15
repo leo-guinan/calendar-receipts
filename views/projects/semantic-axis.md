@@ -9,13 +9,18 @@ Current status: RED
 
 Promise: By the end of 2026-W25, Semantic Axis turns a measurement into a durable, inspectable scientific artifact: saved report block, permalink, fresh-browser reconstruction, fork lineage, full provenance, and Ben approval. The captured artifact must show the complete user experience, not just a backend response.
 
-Progress: 0/5 tests passed (0% weighted).
+Progress: 0/10 tests passed (0% weighted).
 
 Subtasks / artifact gates:
-- [ ] saved-report-permalink-ux-artifact-captured — expected at least 1 matching receipt(s); observed 0
+- [ ] measurement-run-baseline-captured — expected at least 1 matching receipt(s); observed 0
+- [ ] saved-report-created-captured — expected at least 1 matching receipt(s); observed 0
+- [ ] permalink-reconstruction-captured — expected at least 1 matching receipt(s); observed 0
+- [ ] provenance-inspection-captured — expected at least 1 matching receipt(s); observed 0
 - [ ] fork-lineage-ux-artifact-captured — expected at least 1 matching receipt(s); observed 0
-- [ ] ux-artifact-names-required-experience — expected every matching receipt field 'user_experience' to contain 'run measurement, save report, open permalink in a fresh browser, fork report'; matched 0, failures []
-- [ ] provenance-visible-in-artifact — expected every matching receipt field 'evidence' to contain 'provenance'; matched 0, failures []
+- [ ] full-walkthrough-captured — expected at least 1 matching receipt(s); observed 0
+- [ ] full-walkthrough-names-required-experience — expected every matching receipt field 'user_experience' to contain 'run measurement, save report, open permalink in a fresh browser, fork report'; matched 0, failures []
+- [ ] provenance-visible-in-artifacts — expected every matching receipt field 'evidence' to contain 'provenance'; matched 0, failures []
+- [ ] fork-lineage-shows-parent-id — expected every matching receipt field 'evidence' to contain 'parent_id'; matched 0, failures []
 - [ ] ben-phase-1-signoff-recorded — expected at least 1 matching receipt(s); observed 0
 
 ## Upcoming weeks

@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-06-15T15:44:24.224874+00:00",
+  "created_at": "2026-06-15T17:36:44.958012+00:00",
   "failures": [
     {
       "expectation_id": "time-war-baseline-2026-W25",
@@ -67,7 +67,37 @@
       "observed": 0,
       "passed": false,
       "severity": "critical",
-      "test_id": "saved-report-permalink-ux-artifact-captured",
+      "test_id": "measurement-run-baseline-captured",
+      "weight": 4
+    },
+    {
+      "expectation_id": "semax-phase-1-scientific-artifact-2026-W25",
+      "expected": 1,
+      "message": "expected at least 1 matching receipt(s); observed 0",
+      "observed": 0,
+      "passed": false,
+      "severity": "critical",
+      "test_id": "saved-report-created-captured",
+      "weight": 5
+    },
+    {
+      "expectation_id": "semax-phase-1-scientific-artifact-2026-W25",
+      "expected": 1,
+      "message": "expected at least 1 matching receipt(s); observed 0",
+      "observed": 0,
+      "passed": false,
+      "severity": "critical",
+      "test_id": "permalink-reconstruction-captured",
+      "weight": 5
+    },
+    {
+      "expectation_id": "semax-phase-1-scientific-artifact-2026-W25",
+      "expected": 1,
+      "message": "expected at least 1 matching receipt(s); observed 0",
+      "observed": 0,
+      "passed": false,
+      "severity": "critical",
+      "test_id": "provenance-inspection-captured",
       "weight": 5
     },
     {
@@ -82,12 +112,22 @@
     },
     {
       "expectation_id": "semax-phase-1-scientific-artifact-2026-W25",
+      "expected": 1,
+      "message": "expected at least 1 matching receipt(s); observed 0",
+      "observed": 0,
+      "passed": false,
+      "severity": "critical",
+      "test_id": "full-walkthrough-captured",
+      "weight": 6
+    },
+    {
+      "expectation_id": "semax-phase-1-scientific-artifact-2026-W25",
       "expected": "run measurement, save report, open permalink in a fresh browser, fork report",
       "message": "expected every matching receipt field 'user_experience' to contain 'run measurement, save report, open permalink in a fresh browser, fork report'; matched 0, failures []",
       "observed": [],
       "passed": false,
       "severity": "important",
-      "test_id": "ux-artifact-names-required-experience",
+      "test_id": "full-walkthrough-names-required-experience",
       "weight": 3
     },
     {
@@ -97,7 +137,17 @@
       "observed": [],
       "passed": false,
       "severity": "critical",
-      "test_id": "provenance-visible-in-artifact",
+      "test_id": "provenance-visible-in-artifacts",
+      "weight": 5
+    },
+    {
+      "expectation_id": "semax-phase-1-scientific-artifact-2026-W25",
+      "expected": "parent_id",
+      "message": "expected every matching receipt field 'evidence' to contain 'parent_id'; matched 0, failures []",
+      "observed": [],
+      "passed": false,
+      "severity": "critical",
+      "test_id": "fork-lineage-shows-parent-id",
       "weight": 5
     },
     {
@@ -112,19 +162,19 @@
     }
   ],
   "horizon": "weekly",
-  "id": "weekly-test-run-2026-W25-20260615T154424Z",
+  "id": "weekly-test-run-2026-W25-20260615T173644Z",
   "period": "2026-W25",
   "promise": "Run weekly expectation tests against receipts for 2026-W25.",
-  "result": "0/9 tests passed; weighted pass rate 0.0%.",
+  "result": "0/14 tests passed; weighted pass rate 0.0%.",
   "status": "closed_partial",
   "summary": {
-    "critical_failures": 6,
-    "failed": 9,
+    "critical_failures": 11,
+    "failed": 14,
     "passed": 0,
     "passed_weight": 0,
     "raw_pass_rate": 0.0,
-    "total": 9,
-    "total_weight": 44,
+    "total": 14,
+    "total_weight": 69,
     "weighted_pass_rate": 0.0
   },
   "type": "calendar_test_run"
