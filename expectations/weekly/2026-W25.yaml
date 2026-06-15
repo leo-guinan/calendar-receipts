@@ -1,0 +1,61 @@
+expectations:
+  - id: time-war-baseline-2026-W25
+    horizon: weekly
+    period: 2026-W25
+    project: time-war
+    severity: important
+    weight: 1
+    promise: >
+      Establish a baseline publishing cadence for Time War by publishing or scheduling
+      one longform introduction and three Shorts per day for the first measured week.
+    tests:
+      - id: monday-longform-receipt-exists
+        type: receipt_exists
+        severity: critical
+        weight: 5
+        query:
+          project: time-war
+          type: youtube_longform_upload
+          period: 2026-W25
+        required_count: 1
+
+      - id: daily-shorts-cadence
+        type: receipt_count_by_day
+        severity: critical
+        weight: 7
+        query:
+          project: time-war
+          type: youtube_short_upload
+          period: 2026-W25
+        required_per_day: 3
+        days:
+          - "2026-06-15"
+          - "2026-06-16"
+          - "2026-06-17"
+          - "2026-06-18"
+          - "2026-06-19"
+          - "2026-06-20"
+          - "2026-06-21"
+
+      - id: all-youtube-receipts-link-hhgttf
+        type: field_contains
+        severity: important
+        weight: 3
+        query:
+          project: time-war
+          type:
+            - youtube_longform_upload
+            - youtube_short_upload
+          period: 2026-W25
+        field: description_links
+        contains: https://hitchhikersguidetothefuture.com
+
+      - id: weekly-analytics-baseline-exists
+        type: receipt_exists
+        severity: important
+        weight: 3
+        query:
+          project: time-war
+          type: youtube_analytics_snapshot
+          period: 2026-W25
+        required_count: 1

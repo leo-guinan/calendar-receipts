@@ -1,0 +1,17 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+__pycache__/
+.pytest_cache/
+.venv/
+*.pyc
+
+# Private local outputs
+*.private.json
+*.private.md
+secrets/
+credentials/
+tokens/
+
+# Keep captured test results only when deliberately committed

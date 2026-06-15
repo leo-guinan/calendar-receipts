@@ -1,0 +1,81 @@
+{
+  "created_at": "2026-06-15T12:48:39.003278+00:00",
+  "failures": [
+    {
+      "expectation_id": "time-war-baseline-2026-W25",
+      "expected": 1,
+      "message": "expected at least 1 matching receipt(s); observed 0",
+      "observed": 0,
+      "passed": false,
+      "severity": "critical",
+      "test_id": "monday-longform-receipt-exists",
+      "weight": 5
+    },
+    {
+      "expectation_id": "time-war-baseline-2026-W25",
+      "expected": {
+        "days": [
+          "2026-06-15",
+          "2026-06-16",
+          "2026-06-17",
+          "2026-06-18",
+          "2026-06-19",
+          "2026-06-20",
+          "2026-06-21"
+        ],
+        "required_per_day": 3
+      },
+      "message": "expected 3/day; failing days: {'2026-06-15': 0, '2026-06-16': 0, '2026-06-17': 0, '2026-06-18': 0, '2026-06-19': 0, '2026-06-20': 0, '2026-06-21': 0}",
+      "observed": {
+        "2026-06-15": 0,
+        "2026-06-16": 0,
+        "2026-06-17": 0,
+        "2026-06-18": 0,
+        "2026-06-19": 0,
+        "2026-06-20": 0,
+        "2026-06-21": 0
+      },
+      "passed": false,
+      "severity": "critical",
+      "test_id": "daily-shorts-cadence",
+      "weight": 7
+    },
+    {
+      "expectation_id": "time-war-baseline-2026-W25",
+      "expected": "https://hitchhikersguidetothefuture.com",
+      "message": "expected every matching receipt field 'description_links' to contain 'https://hitchhikersguidetothefuture.com'; matched 0, failures []",
+      "observed": [],
+      "passed": false,
+      "severity": "important",
+      "test_id": "all-youtube-receipts-link-hhgttf",
+      "weight": 3
+    },
+    {
+      "expectation_id": "time-war-baseline-2026-W25",
+      "expected": 1,
+      "message": "expected at least 1 matching receipt(s); observed 0",
+      "observed": 0,
+      "passed": false,
+      "severity": "important",
+      "test_id": "weekly-analytics-baseline-exists",
+      "weight": 3
+    }
+  ],
+  "horizon": "weekly",
+  "id": "weekly-test-run-2026-W25-20260615T124839Z",
+  "period": "2026-W25",
+  "promise": "Run weekly expectation tests against receipts for 2026-W25.",
+  "result": "0/4 tests passed; weighted pass rate 0.0%.",
+  "status": "closed_partial",
+  "summary": {
+    "critical_failures": 2,
+    "failed": 4,
+    "passed": 0,
+    "passed_weight": 0,
+    "raw_pass_rate": 0.0,
+    "total": 4,
+    "total_weight": 18,
+    "weighted_pass_rate": 0.0
+  },
+  "type": "calendar_test_run"
+}

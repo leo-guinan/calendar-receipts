@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Calendar Expectation",
+  "type": "object",
+  "required": [
+    "id",
+    "horizon",
+    "period",
+    "project",
+    "promise",
+    "tests"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "horizon": {
+      "enum": [
+        "daily",
+        "weekly",
+        "monthly",
+        "yearly"
+      ]
+    },
+    "period": {
+      "type": "string"
+    },
+    "project": {
+      "type": "string"
+    },
+    "promise": {
+      "type": "string"
+    },
+    "severity": {
+      "enum": [
+        "critical",
+        "important",
+        "nice_to_have"
+      ]
+    },
+    "weight": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "tests": {
+      "type": "array",
+      "minItems": 1
+    }
+  }
+}
