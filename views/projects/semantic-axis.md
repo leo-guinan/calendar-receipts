@@ -1,7 +1,7 @@
 # semantic-axis project view
 
 Current period: 2026-W25
-Current status: RED
+Current status: PARTIAL
 
 ## Current initiative — 2026-W25
 
@@ -9,17 +9,17 @@ Current status: RED
 
 Promise: By the end of 2026-W25, Semantic Axis turns a measurement into a durable, inspectable scientific artifact: saved report block, permalink, fresh-browser reconstruction, fork lineage, full provenance, and Ben approval. The captured artifact must show the complete user experience, not just a backend response.
 
-Progress: 0/10 tests passed (0% weighted).
+Progress: 3/10 tests passed (27% weighted).
 
 Subtasks / artifact gates:
-- [ ] measurement-run-baseline-captured — expected at least 1 matching receipt(s); observed 0
-- [ ] saved-report-created-captured — expected at least 1 matching receipt(s); observed 0
-- [ ] permalink-reconstruction-captured — expected at least 1 matching receipt(s); observed 0
+- [x] measurement-run-baseline-captured — expected at least 1 matching receipt(s); observed 1
+- [x] saved-report-created-captured — expected at least 1 matching receipt(s); observed 1
+- [x] permalink-reconstruction-captured — expected at least 1 matching receipt(s); observed 1
 - [ ] provenance-inspection-captured — expected at least 1 matching receipt(s); observed 0
 - [ ] fork-lineage-ux-artifact-captured — expected at least 1 matching receipt(s); observed 0
 - [ ] full-walkthrough-captured — expected at least 1 matching receipt(s); observed 0
 - [ ] full-walkthrough-names-required-experience — expected every matching receipt field 'user_experience' to contain 'run measurement, save report, open permalink in a fresh browser, fork report'; matched 0, failures []
-- [ ] provenance-visible-in-artifacts — expected every matching receipt field 'evidence' to contain 'provenance'; matched 0, failures []
+- [ ] provenance-visible-in-artifacts — expected every matching receipt field 'evidence' to contain 'provenance'; matched 3, failures ['semax-phase-1-measurement-run-baseline-2026-W25', 'semax-phase-1-saved-report-created-2026-W25', 'semax-phase-1-permalink-reconstruction-2026-W25']
 - [ ] fork-lineage-shows-parent-id — expected every matching receipt field 'evidence' to contain 'parent_id'; matched 0, failures []
 - [ ] ben-phase-1-signoff-recorded — expected at least 1 matching receipt(s); observed 0
 
